@@ -1,0 +1,29 @@
+{
+  "name": "sample-webapp",
+  "version": "1.0.0",
+  "description": "for use demo webapp with express engine",
+  "main": "app.js",
+  "scripts": {
+    "serve":"node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korawutp/node-webapp.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Korawut Phuking-ngoen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/korawutp/node-webapp/issues"
+  },
+  "homepage": "https://github.com/korawutp/node-webapp#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "path": "^0.12.7",
+    "request-promise": "^4.2.6"
+  }
+}
