@@ -6,14 +6,13 @@
 <meta charset="utf-8">
 <title>First Page</title>
 
+
 <!--CSS-->
 <link rel="stylesheet" href="/jquery-ui/themes/base/jquery-ui.css">
 
 <!--Javascript-->
 <script src="/jquery/jquery.min.js"></script>
 <script src="/jquery-ui/jquery-ui.min.js"></script>
-
-
 <script type="text/javascript">
     $(document).ready(function () {
        console.log("Onload");
@@ -42,7 +41,7 @@
            headers: { 
              'Content-Type': 'application/json',
              "Accepts": "application/json",
-             "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29scy5lY3BlLm51LmFjLnRoXC9uZXR3b3JrXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjU5MjQ2NTY5LCJleHAiOjE2NTkyNTAxNjksIm5iZiI6MTY1OTI0NjU2OSwianRpIjoiV0RFVWdmV1dmNnhFNnpUeSIsInN1YiI6MTAyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.PYFuK3h0bHY0kuCnXhoFV7fr5Ie-Rc1Z2QTBRpiUZN4",
+             "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29scy5lY3BlLm51LmFjLnRoXC9uZXR3b3JrXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjYxNjk1OTA3LCJleHAiOjE2NjE2OTk1MDcsIm5iZiI6MTY2MTY5NTkwNywianRpIjoiQTg4anVCQ0NVZEhnMFBDOSIsInN1YiI6MTAyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MFP6I99iVgeJ6ecgmtku6yXkXRFLGhS53hYeBA28UqM",
            },
            success: function(data){
              console.log(data);
@@ -53,10 +52,9 @@
            }
          });
        });
-
-        //btnSubmit
-        $('#btnSubmit').click( function(){
-         //console.log("Submit");
+       //btnSubmit
+       $('#btnSubmit').click( function(){
+          //console.log("Submit");
           $.ajax({
             method: "POST",
             url: "https://tools.ecpe.nu.ac.th/network/api/register",
@@ -75,7 +73,6 @@
         });
     });
 </script>
-
 
 <script type="text/javascript">
 
@@ -222,22 +219,20 @@
     }
 </script>
 
-
-
 </head>
 <body>
     <!--put here-->
     <h1>Hello, Hoola</h1>
     <!---->
-    
-    
+
+
     <div id="tabs">
         <ul>
           <li><a href="#tabs-1">1-แบบฟอร์มลงทะเบียน</a></li>
           <li><a href="#tabs-2">2-รายชื่อนิสิต(ALL)</a></li>
           <li><a href="#tabs-3">3-ข้อมูลนิสิต</a></li>
         </ul>
-        <div id="tabs-1">
+        <div id="tabs-1">  
             
         <form id="my-form">
             <input type="text" id="txtStudentID" name="txtStudentID" placeholder="รหัสนิสิต" />
@@ -249,16 +244,30 @@
             <input type="password" id="txtPassword" name="txtPassword" placeholder="รหัสผ่าน" />
             <br/>
             <input type="button" id="btnSubmit" value="Submit"/>
-        </form>    
- 
+        </form>
+
         </div>
         <div id="tabs-2">
           <button class="ui-button ui-widget ui-corner-all" id="btnRequest">Load</button>
-          <div id="myDynamicTable2"></div>
+          <div id="myDynamicTable"></div>
         </div>
         <div id="tabs-3">
+          <div class="flex justify-center">
+            <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+              <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="images/profileAheye.png" alt="" />
+              <div class="p-6 flex flex-col justify-start">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Aheye 4EVE</h5>
+                <p class="text-gray-700 text-base mb-4">
+                  นางฟ้าที่ร้องเพลงได้เพราะที่สุดในโลก วิชวลน้องเล็กแห่ง4EVE มักเน่ที่สวยน่ารักที่สุด มัมหมีคอนเฟิร์ม น้องอ๊ะอาย กรณิศ เล้าสุบินประเสิรฐ 
+                </p>
+                <p class="text-gray-600 text-xs">อยากไปคอนน้องแล้ว</p>
+              </div>
+            </div>
+          </div>
         
         </div>
     </div><!-- tabs-->
+
+
 </body>
 </html>

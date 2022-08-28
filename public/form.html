@@ -1,14 +1,26 @@
-<form class="generated-form"  method="POST" action="http://localhost:3000/"  target="_self">
-    <fieldset>
-      <legend> Student:: </legend>
-       <label for="student_id">student_id:</label><br>
-       <input type="text" id="student_id" name="student_id"><br>
-       <label for="firstname">firstname:</label><br>
-       <input type="text" id="firstname" name="firstname"><br>
-       <label for="lastname">lastname:</label><br>
-       <input type="text" id="lastname" name="lastname"><br>
-       <label for="gender">gender:</label><br>
-       <input type="text" id="gender" name="gender"><br>
-       <input type="submit" value="Submit"><br><br>
-    </fieldset>
-    </form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LoginForm</title>
+</head>
+<meta charset="utf-8">
+<body>
+
+<p>Please fill out the basic information, in the blanks.</p>
+
+
+
+<form id="myForm" method="POST" action="https://tools.ecpe.nu.ac.th/network/api/login"  target="_self">
+  Student_id : <input type="text" id="txtStudentID" name="std_id"><br>
+  Password    : <input type="password" id="txtPassword" name="passw"><br><br>
+  <input type="button" id="btnSubmit" value="Submit">
+</form>
+
+<script>
+function myFunction() {
+  document.getElementById("myForm").submit();
+}
+</script>
+
+</body>
+</html>
